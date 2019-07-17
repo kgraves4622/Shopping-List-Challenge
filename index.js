@@ -1,5 +1,5 @@
 $(document).ready(function(){
-   $("#js-shopping-list-form").submit(function(event){
+   $('#js-shopping-list-form').submit(function(event){
      event.preventDefault();
   
   var myItemHtml = `<li>
@@ -20,13 +20,13 @@ $(document).ready(function(){
   
   
   
-  $('.shopping-item-delete').on("click", function(event) {
+  $(document).on("click", ".shopping-item-delete", function(event) {
     $(this).closest('li').remove();
     });
   
-  $('.shopping-item-toggle').on("click", function(event) {
+  $(document).on("click", ".shopping-item-toggle", function(event) {
     $(this).closest('li').toggleClass('.shopping-item shopping-item__checked');
-  });
 
-  });
-  
+});
+
+});
